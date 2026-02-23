@@ -8,7 +8,7 @@
 
 <title>Ray Precicomp | Next-Gen Pipe Assemblies</title>
 
-<meta name="description" content="Ray Precicomp Pvt Ltd - Advanced engineered plastic pipe assemblies and integrated fluid routing systems for fuel, SCR, pneumatic, thermal, EV and hydrogen mobility platforms.">
+<meta name="description" content="Ray Precicomp Pvt Ltd - Advanced Engineered Plastic Pipe Assemblies and Integrated Routing Systems for Fuel, SCR, Pneumatic, Thermal, EV and Hydrogen mobility platforms.">
 
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="apple-touch-icon" href="favicon.png">
@@ -21,13 +21,15 @@
 
 *{ box-sizing:border-box; }
 
+html{ scroll-behavior:smooth; }
+
 body{
   margin:0;
   font-family:'Inter',sans-serif;
   background:#f4f6f9;
   color:#1e293b;
-  line-height:1.7;
-  overflow-x:hidden;
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
 }
 
 img{
@@ -36,32 +38,31 @@ img{
   display:block;
 }
 
-/* ================= SLIM STICKY HEADER ================= */
+/* ================= HEADER ================= */
 
 header{
   background:#0f172a;
-  padding:12px 6%;   /* reduced height */
+  padding:14px 6%;
   display:flex;
   justify-content:space-between;
   align-items:center;
-  flex-wrap:wrap;
   position:sticky;
   top:0;
   z-index:1000;
-  box-shadow:0 2px 10px rgba(0,0,0,0.2);
+  box-shadow:0 4px 20px rgba(0,0,0,0.15);
 }
 
 .logo-box{
   background:white;
-  padding:6px 14px;   /* reduced */
-  border-radius:6px;
+  padding:8px 18px;
+  border-radius:8px;
 }
 
 .logo-box img{
-  height:60px;   /* desktop */
+  height:64px;
 }
 
-/* NAV */
+/* DESKTOP NAV */
 
 nav{
   display:flex;
@@ -70,23 +71,37 @@ nav{
 
 nav a{
   color:#e2e8f0;
-  margin-left:20px;
+  margin-left:24px;
   text-decoration:none;
-  font-size:0.9rem;
+  font-size:0.95rem;
   font-weight:600;
+  letter-spacing:0.3px;
 }
 
-nav a:hover{
-  color:#38bdf8;
+nav a:hover{ color:#38bdf8; }
+
+/* MOBILE MENU BUTTON */
+
+.menu-toggle{
+  display:none;
+  flex-direction:column;
+  cursor:pointer;
 }
 
-/* HERO */
+.menu-toggle span{
+  width:26px;
+  height:3px;
+  background:white;
+  margin:4px 0;
+}
+
+/* ================= HERO ================= */
 
 .hero{
   position:relative;
   background:url('hero.jpg') center/cover no-repeat;
   color:white;
-  padding:140px 20px;
+  padding:160px 20px;
   text-align:center;
 }
 
@@ -94,157 +109,196 @@ nav a:hover{
   content:"";
   position:absolute;
   inset:0;
-  background:rgba(0,0,0,0.75);
+  background:rgba(0,0,0,0.72);
 }
 
 .hero-content{
   position:relative;
   z-index:2;
-  max-width:1000px;
+  max-width:1100px;
   margin:auto;
 }
 
 .hero h1{
-  font-size:2.8rem;
+  font-size:3.2rem;
   font-weight:800;
-  margin-bottom:20px;
+  margin-bottom:24px;
+  line-height:1.2;
 }
 
 .hero h2{
-  font-size:1.2rem;
+  font-size:1.3rem;
   font-weight:400;
   color:#e2e8f0;
 }
 
-/* SECTIONS */
+/* ================= SECTIONS ================= */
 
 .section{
-  padding:90px 8%;
+  padding:110px 9%;
   background:white;
 }
 
-.section.gray{ background:#e2e8f0; }
+.section.gray{ background:#eef2f7; }
 .section.dark{ background:#0f172a; color:white; }
 
 .section h2{
-  font-size:2.1rem;
+  font-size:2.4rem;
   font-weight:800;
-  margin-bottom:30px;
+  margin-bottom:40px;
 }
+
+.section h3{ font-size:1.4rem; }
 
 .section p{
-  font-size:1rem;
-  margin-bottom:18px;
+  font-size:1.05rem;
+  margin-bottom:22px;
 }
 
-/* GRID */
+.section ul{ font-size:1.05rem; }
+
+/* ================= SPLIT IMAGE LAYOUT ================= */
+
+.split-section{
+  display:flex;
+  align-items:center;
+  gap:70px;
+}
+
+.split-section.reverse{ flex-direction:row-reverse; }
+
+.split-content{ flex:1; min-width:340px; }
+.split-image{ flex:1; min-width:340px; }
+
+.split-image img{
+  width:100%;
+  border-radius:16px;
+  box-shadow:0 20px 50px rgba(0,0,0,0.18);
+}
+
+/* ================= WHY GRID ================= */
 
 .why-grid{
   display:grid;
   grid-template-columns:repeat(4,1fr);
-  gap:35px;
-  margin-top:40px;
+  gap:40px;
+  margin-top:50px;
 }
 
-.why-item{
-  text-align:center;
-}
+.why-item{text-align:center;}
+.why-item img{width:70px;margin:0 auto 18px auto;}
 
-.why-item img{
-  width:65px;
-  margin-bottom:15px;
-}
-
-/* PRODUCT */
+/* ================= PRODUCT ================= */
 
 .product{
-  margin-bottom:110px;
+  margin-bottom:120px;
   display:flex;
-  flex-wrap:wrap;
-  gap:50px;
+  gap:60px;
   align-items:center;
 }
 
-.product-content{
+.product img{
   flex:1;
-  min-width:300px;
+  border-radius:16px;
+  box-shadow:0 15px 40px rgba(0,0,0,0.12);
 }
+
+.product-content{ flex:1; min-width:320px; }
 
 .specs{
-  background:#e2e8f0;
-  padding:18px;
-  border-radius:8px;
-  margin-top:20px;
-  font-size:0.9rem;
+  background:#eef2f7;
+  padding:22px;
+  border-radius:12px;
+  margin-top:22px;
+  font-size:0.95rem;
 }
 
-/* TABLE */
+/* ================= TABLE ================= */
 
 table{
   width:100%;
   border-collapse:collapse;
-  margin-top:25px;
-  font-size:0.95rem;
+  margin-top:30px;
+  font-size:1rem;
+}
+
+table th{
+  background:#e2e8f0;
+  font-weight:700;
 }
 
 table th, table td{
-  padding:12px;
+  padding:14px;
   border-bottom:1px solid #cbd5e1;
   text-align:left;
 }
 
-/* MOBILE */
+/* ================= FOOTER ================= */
+
+footer{
+  background:#0f172a;
+  color:#94a3b8;
+  padding:50px 20px;
+  text-align:center;
+  font-size:0.9rem;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:1200px){
+  .hero h1{ font-size:2.6rem; }
+  .section{ padding:90px 7%; }
+}
 
 @media(max-width:900px){
 
-  header{
-    padding:8px 5%;
-  }
+  header{ padding:10px 5%; }
 
-  .logo-box img{
-    height:38px;   /* much smaller mobile logo */
-  }
+  .logo-box img{ height:36px; }
 
   nav{
-    justify-content:center;
-    margin-top:6px;
+    display:none;
+    position:absolute;
+    top:70px;
+    right:0;
+    background:#0f172a;
+    width:100%;
+    flex-direction:column;
+    text-align:center;
+    padding:25px 0;
   }
 
   nav a{
-    margin:6px 10px;
-    font-size:0.85rem;
+    display:block;
+    margin:14px 0;
+    font-size:1rem;
   }
 
-  .hero{
-    padding:100px 20px;
-  }
+  nav.active{ display:flex; }
 
-  .hero h1{
-    font-size:1.8rem;
-  }
+  .menu-toggle{ display:flex; }
 
-  .why-grid{
-    grid-template-columns:1fr;
-  }
+  .hero{ padding:110px 20px; }
+  .hero h1{ font-size:2rem; }
+  .hero h2{ font-size:1rem; }
 
-  .product{
+  .section{ padding:70px 6%; }
+  .section h2{ font-size:1.8rem; }
+  .section p, .section ul{ font-size:0.98rem; }
+
+  .split-section, .split-section.reverse{
     flex-direction:column;
+    gap:40px;
   }
+
+  .why-grid{ grid-template-columns:1fr; }
+  .product{ flex-direction:column; }
 
   table{
     display:block;
     overflow-x:auto;
     white-space:nowrap;
   }
-
-}
-
-footer{
-  background:#0f172a;
-  color:#94a3b8;
-  padding:40px 20px;
-  text-align:center;
-  font-size:0.85rem;
 }
 
 </style>
@@ -253,11 +307,18 @@ footer{
 <body>
 
 <header>
+
 <div class="logo-box">
 <img src="logo.png" alt="Ray Precicomp Logo">
 </div>
 
-<nav>
+<div class="menu-toggle" onclick="toggleMenu()">
+<span></span>
+<span></span>
+<span></span>
+</div>
+
+<nav id="nav-menu">
 <a href="#about">Company</a>
 <a href="#advantage">Why Us</a>
 <a href="#products">Products</a>
@@ -266,6 +327,7 @@ footer{
 <a href="#materials">Materials</a>
 <a href="#contact">Contact</a>
 </nav>
+
 </header>
 
 <section class="hero">
@@ -280,6 +342,10 @@ footer{
 <section class="section" id="about">
 
 <h2>Company Overview</h2>
+
+<div class="split-section">
+
+<div class="split-content">
 
 <p>
 Ray Precicomp Pvt Ltd is an engineering-driven manufacturer of advanced polymer-based
@@ -320,15 +386,26 @@ we enable OEMs and Tier-1 suppliers to achieve cost efficiency,
 regulatory compliance and future mobility readiness.
 </p>
 
+</div>
+
+<div class="split-image">
+<img src="Company Overview.png" alt="Company Overview - Fluid Routing Systems">
+</div>
+
+</div>
 </section>
 
 
 
-<!-- ================= STRATEGIC CAPABILITIES ================= -->
+<!-- ================= CORE ENGINEERING ================= -->
 
 <section class="section gray">
 
 <h2>Core Engineering Strength</h2>
+
+<div class="split-section reverse">
+
+<div class="split-content">
 
 <p style="max-width:900px;margin-bottom:40px;">
 Our capability lies in delivering integrated fluid transport solutions that balance
@@ -347,6 +424,13 @@ We engineer with a long-term durability mindset — not just short-term complian
 <li>Design-for-assembly & modular platform adaptability</li>
 </ul>
 
+</div>
+
+<div class="split-image">
+<img src="Engineering.png" alt="Core Engineering Strength">
+</div>
+
+</div>
 </section>
 
 
@@ -437,8 +521,9 @@ cost efficiency and manufacturing readiness.
 </div>
 
 </div>
-
 </section>
+
+
 
 <!-- ================= PRODUCT PORTFOLIO ================= -->
 
@@ -452,8 +537,6 @@ internal combustion, hybrid, battery electric and hydrogen vehicle platforms.
 Each system is engineered for packaging optimization, emission compliance,
 long-term durability and manufacturing scalability.
 </p>
-
-
 
 <!-- ================= FUEL SYSTEMS ================= -->
 
@@ -633,11 +716,17 @@ Lightweight Architecture Optimization
 
 </section>
 
+
+
 <!-- ================= ENGINEERING & VALIDATION ================= -->
 
 <section class="section dark" id="engineering">
 
 <h2>Engineering & Validation Excellence</h2>
+
+<div class="split-section">
+
+<div class="split-content">
 
 <p style="max-width:900px;margin-bottom:30px;">
 Our engineering philosophy is centered on durability, integration efficiency
@@ -663,6 +752,13 @@ All validation protocols align with OEM technical specifications
 and global automotive quality standards.
 </p>
 
+</div>
+
+<div class="split-image">
+<img src="Validation.png" alt="Engineering Validation Testing">
+</div>
+
+</div>
 </section>
 
 
@@ -789,12 +885,9 @@ tailored to application-specific environmental exposure and pressure requirement
 <li>Lightweight metal replacement strategies</li>
 </ul>
 
-
-
 <h3 style="margin-top:50px;">Material Capability Matrix</h3>
 
 <table>
-
 <tr>
 <th>Material</th>
 <th>Mechanical Strength</th>
@@ -834,15 +927,11 @@ tailored to application-specific environmental exposure and pressure requirement
 <td>Optimized</td>
 <td>BS6 / Euro 6 compliant emission systems</td>
 </tr>
-
 </table>
-
-
 
 <h3 style="margin-top:60px;">Pipe Size & Technical Capability</h3>
 
 <table>
-
 <tr>
 <th>Parameter</th>
 <th>Capability Range</th>
@@ -877,7 +966,6 @@ tailored to application-specific environmental exposure and pressure requirement
 <td>Heated Line Capability</td>
 <td>Electrical Integration Ready</td>
 </tr>
-
 </table>
 
 </section>
@@ -905,6 +993,13 @@ for advanced fluid routing and polymer-based transport systems.
 <footer>
 © 2026 Ray Precicomp Pvt Ltd | Next-Gen Pipe Assemblies
 </footer>
+
+<script>
+function toggleMenu(){
+  const nav = document.getElementById("nav-menu");
+  nav.classList.toggle("active");
+}
+</script>
 
 </body>
 </html>
