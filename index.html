@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Ray Precicomp | Next-Gen Pipe Assemblies</title>
+
+<meta name="description" content="Ray Precicomp Pvt Ltd - Engineered plastic pipe assemblies for fuel, SCR, pneumatic, thermal and hydrogen mobility systems for the automotive industry.">
+
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="favicon.png">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{ box-sizing:border-box; }
+
+html{ font-size:18px; }
+
+body{
+  margin:0;
+  font-family:'Inter',sans-serif;
+  background:#f4f6f9;
+  color:#1e293b;
+  line-height:1.75;
+}
+
+/* HEADER */
+
+header{
+  background:#0f172a;
+  padding:18px 6%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+  position:relative; /* not sticky */
+}
+
+.logo-box{
+  background:white;
+  padding:10px 24px;
+  border-radius:8px;
+}
+
+.logo-box img{
+  height:70px;
+}
+
+nav{
+  display:flex;
+  flex-wrap:wrap;
+}
+
+nav a{
+  color:#e2e8f0;
+  margin-left:28px;
+  text-decoration:none;
+  font-size:0.95rem;
+  font-weight:600;
+}
+
+nav a:hover{
+  color:#38bdf8;
+}
+
+/* HERO */
+
+.hero{
+  position:relative;
+  background:url('hero.jpg') center/cover no-repeat;
+  color:white;
+  padding:180px 20px;
+  text-align:center;
+}
+
+.hero::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.75);
+}
+
+.hero-content{
+  position:relative;
+  z-index:2;
+  max-width:1000px;
+  margin:auto;
+}
+
+.hero h1{
+  font-size:3rem;
+  margin-bottom:20px;
+  font-weight:800;
+}
+
+.hero h2{
+  font-size:1.3rem;
+  font-weight:400;
+  color:#e2e8f0;
+}
+
+/* SECTION */
+
+.section{
+  padding:100px 8%;
+  background:white;
+}
+
+.section.dark{
+  background:#0f172a;
+  color:white;
+}
+
+.section.gray{
+  background:#e2e8f0;
+}
+
+.section h2{
+  font-size:2.2rem;
+  margin-bottom:30px;
+  font-weight:800;
+}
+
+.section p{
+  font-size:1.05rem;
+  margin-bottom:18px;
+}
+
+/* PRODUCT */
+
+.product{
+  margin-bottom:120px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:60px;
+  align-items:center;
+}
+
+.product img{
+  width:100%;
+  max-width:520px;
+  border-radius:12px;
+  box-shadow:0 15px 40px rgba(0,0,0,0.15);
+}
+
+.product-content{
+  flex:1;
+  min-width:320px;
+}
+
+.specs{
+  background:#e2e8f0;
+  padding:24px;
+  border-radius:10px;
+  margin-top:25px;
+  font-size:0.95rem;
+}
+
+/* WHY */
+
+.why-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:50px;
+  margin-top:50px;
+}
+
+.why-item{
+  text-align:center;
+}
+
+.why-item img{
+  width:75px;
+  margin-bottom:15px;
+}
+
+/* TABLES */
+
+table{
+  width:100%;
+  border-collapse:collapse;
+  margin-top:25px;
+}
+
+table th,
+table td{
+  padding:16px;
+  border-bottom:1px solid #cbd5e1;
+  text-align:left;
+}
+
+/* FOOTER */
+
+footer{
+  background:#0f172a;
+  color:#94a3b8;
+  padding:50px 20px;
+  text-align:center;
+  font-size:0.9rem;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+  header{
+    padding:14px 6%;
+  }
+
+  .logo-box img{
+    height:55px;
+  }
+
+  nav{
+    margin-top:15px;
+    justify-content:center;
+  }
+
+  nav a{
+    margin:10px 14px;
+    display:inline-block;
+  }
+
+  .hero{
+    padding:120px 20px;
+  }
+
+  .hero h1{
+    font-size:2rem;
+  }
+
+  .why-grid{
+    grid-template-columns:1fr;
+  }
+
+  .product{
+    flex-direction:column;
+  }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="logo-box">
+<img src="logo.png" alt="Ray Precicomp Logo">
+</div>
+
+<nav>
+<a href="#about">Company</a>
+<a href="#advantage">Why Us</a>
+<a href="#products">Products</a>
+<a href="#engineering">Engineering</a>
+<a href="#manufacturing">Manufacturing</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
+
+<section class="hero">
+<div class="hero-content">
+<h1>Next-Gen Pipe Assemblies</h1>
+<h2>Lightweight. Leak-Proof. EV-Ready.</h2>
+</div>
+</section>
+
+<!-- ================= COMPANY OVERVIEW ================= -->
+
+<section class="section" id="about">
+
+<h2>Company Overview</h2>
+
+<p>
+Ray Precicomp Pvt Ltd is a specialized manufacturer of engineered plastic pipe assemblies
+for the automotive industry. We develop integrated fluid transport systems for Fuel delivery,
+SCR emission control, Pneumatic braking, Thermal management and Hydrogen mobility platforms.
+</p>
+
+<p>
+Our product architecture combines advanced polymer engineering,
+multilayer barrier constructions, connector integration and optimized routing geometry
+to deliver compact, lightweight and durable fluid routing solutions aligned with
+global OEM technical requirements.
+</p>
+
+<p>
+We focus on complete system integration rather than individual components —
+reducing leak interfaces, minimizing joints and improving assembly efficiency
+at vehicle level.
+</p>
+
+<p>
+All systems are engineered to meet stringent performance standards including:
+permeation control, burst resistance, impulse fatigue durability,
+chemical compatibility, hydrolysis resistance, thermal cycling stability
+and dimensional robustness under dynamic loading conditions.
+</p>
+
+<p>
+We support the complete APQP lifecycle including feasibility review,
+DFMEA development, prototype validation, PPAP Level 3 documentation,
+control plans, process capability validation and Just-In-Time serial production.
+</p>
+
+<p>
+Our approach integrates global system thinking with localized execution —
+enabling emission-compliant, cost-competitive and future-ready mobility solutions
+for Indian and international vehicle platforms.
+</p>
+
+</section>
+
+
+
+<!-- ================= WHY RAY PRECICOMP ================= -->
+
+<section class="section gray" id="advantage">
+
+<h2>Why Ray Precicomp</h2>
+
+<p style="max-width:900px;margin-bottom:40px;">
+We operate with a system-level mindset — focusing on vehicle integration,
+functional reliability and platform scalability.
+Our solutions are engineered not just for component performance,
+but for complete architecture optimization.
+</p>
+
+<div class="why-grid">
+
+<div class="why-item">
+<img src="icons/compact-installation.png" alt="">
+<h3>Optimized Packaging & Routing</h3>
+<p>
+Space-efficient routing solutions engineered for complex
+underbody, engine bay and battery pack environments.
+</p>
+</div>
+
+<div class="why-item">
+<img src="icons/leakproof-reliability.png" alt="">
+<h3>Validated Sealing Integrity</h3>
+<p>
+Connector-integrated assemblies validated for vibration endurance,
+thermal expansion cycles and high-pressure sealing reliability.
+</p>
+</div>
+
+<div class="why-item">
+<img src="icons/system-expertise.png" alt="">
+<h3>System-Level Engineering</h3>
+<p>
+Design-for-assembly architecture reducing installation time
+and vehicle integration complexity.
+</p>
+</div>
+
+<div class="why-item">
+<img src="icons/performance-cost.png" alt="">
+<h3>Lightweight Performance</h3>
+<p>
+Advanced polymer selection and barrier-layer construction
+for optimized mass reduction without compromising durability.
+</p>
+</div>
+
+<div class="why-item">
+<img src="icons/tailored-application.png" alt="">
+<h3>Platform Scalability</h3>
+<p>
+Adaptable system architecture supporting ICE, HEV, BEV
+and Hydrogen platforms.
+</p>
+</div>
+
+<div class="why-item">
+<img src="icons/future-technologies.png" alt="">
+<h3>Emission & Regulatory Compliance</h3>
+<p>
+Low-permeation multilayer technologies aligned with BS6,
+Euro 6 and evolving global emission standards.
+</p>
+</div>
+
+<div class="why-item">
+<img src="icons/proven-durability.png" alt="">
+<h3>High Durability Validation</h3>
+<p>
+Impulse, burst, thermal aging, chemical exposure
+and vibration fatigue endurance testing.
+</p>
+</div>
+
+<div class="why-item">
+<img src="icons/innovation-partner.png" alt="">
+<h3>Collaborative Development Partner</h3>
+<p>
+Early-stage engineering involvement from concept
+through serial production.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= PRODUCT SECTION ================= -->
+
+<section class="section" id="products">
+
+<h2>Product Portfolio</h2>
+
+<p style="max-width:950px;margin-bottom:60px;">
+Our portfolio covers complete fluid transport architectures across conventional,
+hybrid, battery electric and hydrogen vehicle platforms. Each system is engineered
+for weight optimization, long-term durability, emission compliance and
+vehicle-level integration efficiency.
+</p>
+
+
+
+<!-- FUEL SYSTEMS -->
+<div class="product">
+<img src="Fuel.jpg" alt="Fuel Systems">
+<div class="product-content">
+<h3>Fuel Delivery Systems</h3>
+
+<p>
+Engineered mono-layer and multilayer plastic tube assemblies for gasoline and diesel applications.
+Designed for low permeation, ethanol compatibility (E10, E20 and up to E95),
+thermal resistance and long-term durability.
+</p>
+
+<ul>
+<li>Tank-to-engine routing systems</li>
+<li>Supply, Return & Vent lines</li>
+<li>Quick connector integrated assemblies</li>
+<li>BS6 / Euro 6 compliant solutions</li>
+<li>Vibration and thermal fatigue validated</li>
+</ul>
+
+<div class="specs">
+Operating Temperature: -40°C to +120°C<br>
+Burst Pressure: Application dependent<br>
+Low Permeation Compliant<br>
+100% End-of-Line Leak Tested
+</div>
+</div>
+</div>
+
+
+
+<!-- SCR SYSTEMS -->
+<div class="product">
+<img src="scr.jpg" alt="SCR Systems">
+<div class="product-content">
+<h3>SCR / Urea Delivery Systems</h3>
+
+<p>
+Selective Catalytic Reduction (SCR) fluid lines engineered for urea crystallization resistance,
+chemical durability and stable performance across extreme operating conditions.
+</p>
+
+<ul>
+<li>Heated and Non-Heated assemblies</li>
+<li>Tank-to-dosing module integration</li>
+<li>Low-temperature flexibility</li>
+<li>Chemical-resistant multilayer materials</li>
+<li>Connector-integrated leak-proof architecture</li>
+</ul>
+
+<div class="specs">
+Operating Temperature: -40°C to +95°C<br>
+Urea Compatible Polymers<br>
+Pressure & Impulse Validated<br>
+100% Leak Verification
+</div>
+</div>
+</div>
+
+
+
+<!-- PNEUMATIC SYSTEMS -->
+<div class="product">
+<img src="pneumatic.jpg" alt="Pneumatic Systems">
+<div class="product-content">
+<h3>Pneumatic & Air Brake Systems</h3>
+
+<p>
+Plastic tubing systems for commercial vehicle air brake, air suspension
+and vacuum applications. Designed for high impulse cycles and
+dimensional stability under pressure.
+</p>
+
+<ul>
+<li>Air brake routing systems</li>
+<li>Suspension air lines</li>
+<li>Vacuum assist brake lines</li>
+<li>ABS compatible assemblies</li>
+<li>High-cycle durability architecture</li>
+</ul>
+
+<div class="specs">
+Working Pressure: Up to 15 bar<br>
+High Impulse Resistance<br>
+Burst and Fatigue Validated<br>
+Temperature Stable Compounds
+</div>
+</div>
+</div>
+
+
+
+<!-- THERMAL MANAGEMENT -->
+<div class="product">
+<img src="thermal.jpg" alt="Thermal Systems">
+<div class="product-content">
+<h3>Thermal & Battery Cooling Systems</h3>
+
+<p>
+Lightweight plastic coolant and battery cooling assemblies for HEV and BEV architectures.
+Optimized for high-temperature performance, glycol compatibility and compact packaging.
+</p>
+
+<ul>
+<li>Battery cooling circuits</li>
+<li>Power electronics cooling loops</li>
+<li>Degassing systems</li>
+<li>Metal replacement lightweight solutions</li>
+<li>Electrified vehicle optimized routing</li>
+</ul>
+
+<div class="specs">
+Operating Temperature: -40°C to +125°C<br>
+Coolant & Glycol Compatible<br>
+Impulse & Pressure Tested<br>
+EV Platform Ready
+</div>
+</div>
+</div>
+
+
+
+<!-- HYDROGEN SYSTEMS -->
+<div class="product">
+<img src="hydrogen.jpg" alt="Hydrogen Systems">
+<div class="product-content">
+<h3>Hydrogen & Alternative Fuel Lines</h3>
+
+<p>
+Next-generation fluid transport concepts for hydrogen mobility platforms
+and alternative fuel architectures. Designed for lightweight optimization
+and future mobility integration.
+</p>
+
+<ul>
+<li>Hydrogen routing concepts</li>
+<li>Medium & Low-pressure capable materials</li>
+<li>Future mobility platform ready</li>
+<li>Lightweight optimized assemblies</li>
+</ul>
+
+<div class="specs">
+Hydrogen Compatible Polymer Concepts<br>
+Safety-Oriented System Design<br>
+Lightweight Architecture Optimization
+</div>
+</div>
+</div>
+
+</section>
+
+<!-- ================= ENGINEERING ================= -->
+
+<section class="section dark" id="engineering">
+
+<h2>Engineering & Validation</h2>
+
+<p style="max-width:900px;">
+Our engineering approach is focused on system reliability, integration efficiency
+and long-term durability validation. We support projects from early feasibility
+through serial production readiness.
+</p>
+
+<ul>
+<li>APQP & DFMEA Support</li>
+<li>Pressure & Burst Testing</li>
+<li>Impulse & Fatigue Validation</li>
+<li>Thermal Cycling & Aging Tests</li>
+<li>Chemical Compatibility Validation</li>
+<li>Dimensional Capability (Cp / Cpk)</li>
+<li>Control Plan & SPC Implementation</li>
+<li>PPAP Level 3 Documentation</li>
+</ul>
+
+<p>
+All validation activities are aligned with OEM specifications
+and global automotive quality standards.
+</p>
+
+</section>
+
+
+
+<!-- ================= MANUFACTURING ================= -->
+
+<section class="section" id="manufacturing">
+
+<h2>Manufacturing Excellence</h2>
+
+<img src="manufacturing.jpg" style="width:100%;max-width:1000px;border-radius:12px;margin-bottom:40px;" alt="Manufacturing">
+
+<p>
+Lean manufacturing environment with traceable batch control,
+integrated forming, connector assembly, laser marking
+and 100% leak testing systems aligned with OEM Just-In-Time supply models.
+</p>
+
+<ul>
+<li>Tube forming & routing systems</li>
+<li>End-fitting and connector integration</li>
+<li>Laser marking & traceability</li>
+<li>End-of-line validation</li>
+<li>Preventive maintenance programs</li>
+</ul>
+
+</section>
+
+
+
+<!-- ================= VEHICLE PLATFORM INTEGRATION ================= -->
+
+<section class="section gray">
+
+<h2>Vehicle Platform Integration</h2>
+
+<table>
+<tr>
+<th>System</th>
+<th>ICE</th>
+<th>HEV</th>
+<th>BEV</th>
+<th>Hydrogen</th>
+</tr>
+
+<tr>
+<td><strong>Air Lines</strong></td>
+<td>✔</td>
+<td>✔</td>
+<td>✔</td>
+<td>✔</td>
+</tr>
+
+<tr>
+<td>Fuel Delivery</td>
+<td>✔</td>
+<td>✔</td>
+<td>-</td>
+<td>-</td>
+</tr>
+
+<tr>
+<td>SCR Systems</td>
+<td>✔</td>
+<td>✔</td>
+<td>-</td>
+<td>-</td>
+</tr>
+
+<tr>
+<td>Battery Cooling</td>
+<td>-</td>
+<td>✔</td>
+<td>✔</td>
+<td>-</td>
+</tr>
+
+<tr>
+<td>Hydrogen Lines</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>✔</td>
+</tr>
+
+</table>
+
+</section>
+
+
+
+<!-- ================= MATERIALS SECTION ================= -->
+
+<section class="section">
+
+<h2>Materials & Polymer Engineering</h2>
+
+<ul>
+<li>Advanced PA6, PA11 & PA12 engineering polymers</li>
+<li>Multilayer EVOH barrier construction</li>
+<li>E10, E20 up to E95 and Bio Diesel compatibility</li>
+<li>Thermal aging & hydrolysis stability</li>
+<li>Lightweight metal replacement strategies</li>
+</ul>
+
+
+
+<h3 style="margin-top:40px;">Material Capability Matrix</h3>
+
+<table>
+
+<tr>
+<th>Material</th>
+<th>Strength</th>
+<th>Chemical Resistance</th>
+<th>Moisture Absorption</th>
+<th>Primary Applications</th>
+</tr>
+
+<tr>
+<td>PA6 (Nylon 6)</td>
+<td>High Mechanical Strength</td>
+<td>Good</td>
+<td>Higher Absorption</td>
+<td>Cost-sensitive structural systems</td>
+</tr>
+
+<tr>
+<td>PA11 (Nylon 11)</td>
+<td>High Strength with Flexibility</td>
+<td>Very Good</td>
+<td>Low</td>
+<td>Fuel & chemical handling lines</td>
+</tr>
+
+<tr>
+<td>PA12 (Nylon 12)</td>
+<td>Very High Dimensional Stability</td>
+<td>Excellent</td>
+<td>Very Low</td>
+<td>Premium fuel, SCR, thermal & EV systems</td>
+</tr>
+
+<tr>
+<td>Multilayer EVOH Barrier</td>
+<td>Engineered Composite</td>
+<td>Ultra-Low Permeation</td>
+<td>Optimized</td>
+<td>BS6 / Euro 6 emission compliant systems</td>
+</tr>
+
+</table>
+
+
+
+<h3 style="margin-top:60px;">Pipe Size & Technical Capability</h3>
+
+<table>
+
+<tr>
+<th>Parameter</th>
+<th>Capability Range</th>
+</tr>
+
+<tr>
+<td>Outer Diameter (OD)</td>
+<td>4 mm – 25 mm</td>
+</tr>
+
+<tr>
+<td>Wall Thickness</td>
+<td>0.75 mm – 3.0 mm</td>
+</tr>
+
+<tr>
+<td>Working Pressure</td>
+<td>Up to 30 bar (application dependent)</td>
+</tr>
+
+<tr>
+<td>Temperature Range</td>
+<td>-40°C to +125°C</td>
+</tr>
+
+<tr>
+<td>Forming Capability</td>
+<td>Complex Multi-Axis Geometries</td>
+</tr>
+
+<tr>
+<td>Heated Line Capability</td>
+<td>Electrical Integration Ready</td>
+</tr>
+
+</table>
+
+</section>
+
+
+
+<!-- ================= CONTACT ================= -->
+
+<section class="section" id="contact">
+
+<h2>Contact</h2>
+
+<p>Email: sales@rayprecicomp.com</p>
+<p>Pune, India</p>
+
+</section>
+
+
+
+<footer>
+© 2026 Ray Precicomp Pvt Ltd | Next-Gen Pipe Assemblies
+</footer>
+
+</body>
+</html>
