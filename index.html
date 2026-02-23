@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -38,8 +38,7 @@ header{
   justify-content:space-between;
   align-items:center;
   flex-wrap:wrap;
-  position:sticky;
-  top:0;
+  position:relative;   
   z-index:1000;
 }
 
@@ -207,7 +206,13 @@ footer{
 /* MOBILE */
 
 @media(max-width:900px){
+header{
+    padding:14px 6%;
+  }
 
+  .logo-box img{
+    height:55px;
+  }
   header{
     flex-direction:column;
     align-items:center;
@@ -1212,5 +1217,6 @@ Lightweight vehicle integration | Electrified mobility ready architectures
 </p>
 
 </div>
+
 
 </footer>
