@@ -1,14 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-
 <head>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Ray Precicomp | Next-Gen Pipe Assemblies</title>
+<title>Ray Precicomp | Advanced Fluid Routing Systems</title>
 
-<meta name="description" content="Ray Precicomp Pvt Ltd - Engineered plastic pipe assemblies for fuel, SCR, pneumatic, thermal and hydrogen mobility systems for the Indian automotive industry.">
+<meta name="description" content="Ray Precicomp Pvt Ltd - Advanced fluid routing and plastic pipe assembly systems for fuel, SCR, pneumatic, thermal, EV and hydrogen mobility platforms.">
 
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="apple-touch-icon" href="favicon.png">
@@ -23,12 +20,18 @@
 }
 </script>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 
+/* ================= GLOBAL RESET ================= */
+
 *{
   box-sizing:border-box;
+}
+
+html{
+  font-size:18px; /* Larger base size for mobile readability */
 }
 
 body{
@@ -36,16 +39,19 @@ body{
   font-family:'Inter',sans-serif;
   background:#f4f6f9;
   color:#1e293b;
-  line-height:1.7;
-  font-size: 16px; /* Optimized base size for mobile legibility */
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
 }
+
+/* ================= HEADER ================= */
 
 header{
   background:#0f172a;
-  padding:15px 5%;
+  padding:18px 6%;
   display:flex;
   justify-content:space-between;
   align-items:center;
+  flex-wrap:wrap;
   position:sticky;
   top:0;
   z-index:1000;
@@ -53,40 +59,41 @@ header{
 
 .logo-box{
   background:white;
-  padding:8px 22px;
-  border-radius:6px;
+  padding:10px 24px;
+  border-radius:8px;
   display:flex;
   align-items:center;
 }
 
 .logo-box img{
-  height:clamp(40px, 8vw, 60px);
+  height:70px;
 }
 
 nav{
   display:flex;
   flex-wrap:wrap;
-  justify-content: flex-end;
 }
 
 nav a{
   color:#e2e8f0;
-  margin-left:20px;
+  margin-left:28px;
   text-decoration:none;
-  font-size:14px;
-  font-weight:500;
-  padding: 5px 0;
+  font-size:0.95rem;
+  font-weight:600;
+  letter-spacing:0.3px;
 }
 
 nav a:hover{
   color:#38bdf8;
 }
 
+/* ================= HERO ================= */
+
 .hero{
   position:relative;
   background:url('hero.jpg') center/cover no-repeat;
   color:white;
-  padding:clamp(80px, 15vh, 160px) 20px;
+  padding:180px 20px;
   text-align:center;
 }
 
@@ -97,7 +104,7 @@ nav a:hover{
   left:0;
   width:100%;
   height:100%;
-  background:rgba(0,0,0,0.7);
+  background:linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75));
 }
 
 .hero-content{
@@ -108,19 +115,22 @@ nav a:hover{
 }
 
 .hero h1{
-  font-size:clamp(24px, 5vw, 48px);
+  font-size:3rem;
   margin-bottom:20px;
-  line-height: 1.2;
+  font-weight:800;
+  line-height:1.2;
 }
 
 .hero h2{
   font-weight:400;
-  font-size:clamp(16px, 3vw, 22px);
+  font-size:1.3rem;
   color:#e2e8f0;
 }
 
+/* ================= SECTION ================= */
+
 .section{
-  padding:clamp(50px, 8vw, 90px) 8%;
+  padding:100px 8%;
   background:white;
 }
 
@@ -134,84 +144,86 @@ nav a:hover{
 }
 
 .section h2{
-  font-size:clamp(22px, 4vw, 34px);
-  margin-bottom:25px;
+  font-size:2.2rem;
+  margin-bottom:30px;
+  font-weight:800;
 }
 
+.section p{
+  font-size:1.05rem;
+  margin-bottom:18px;
+}
+
+/* ================= PRODUCT ================= */
+
 .product{
-  margin-bottom:80px;
+  margin-bottom:120px;
   display:flex;
   flex-wrap:wrap;
-  gap:40px;
-  align-items:flex-start;
+  gap:60px;
+  align-items:center;
 }
 
 .product img{
-  flex: 1 1 400px;
-  max-width:100%;
+  width:100%;
+  max-width:520px;
   height:auto;
-  border-radius:10px;
-  box-shadow:0 10px 30px rgba(0,0,0,0.12);
+  border-radius:12px;
+  box-shadow:0 15px 40px rgba(0,0,0,0.15);
 }
 
 .product-content{
-  flex: 1 1 300px;
+  flex:1;
+  min-width:320px;
 }
 
 .product-content h3{
   margin-top:0;
-  font-size:24px;
+  font-size:1.6rem;
+  font-weight:700;
 }
 
 ul{
   padding-left:20px;
+  font-size:1rem;
 }
 
 .specs{
   background:#e2e8f0;
-  padding:20px;
-  border-radius:8px;
-  margin-top:20px;
-  font-size:14px;
-  color: #1e293b;
+  padding:24px;
+  border-radius:10px;
+  margin-top:25px;
+  font-size:0.95rem;
+  line-height:1.6;
 }
 
-/* TABLE RESPONSIVENESS */
-.table-container {
-  width: 100%;
-  overflow-x: auto;
-  margin-top: 20px;
-  -webkit-overflow-scrolling: touch;
-}
+/* ================= TABLES ================= */
 
 table{
   width:100%;
   border-collapse:collapse;
-  min-width: 600px; /* Prevents squashing on mobile */
+  margin-top:25px;
+  font-size:0.95rem;
 }
 
 table th,
 table td{
-  padding:12px;
+  padding:16px;
   border-bottom:1px solid #cbd5e1;
-  font-size:14px;
   text-align:left;
 }
 
-footer{
-  background:#0f172a;
-  color:#94a3b8;
-  padding:40px 20px;
-  text-align:center;
-  font-size:14px;
+table th{
+  font-weight:700;
 }
 
-/* WHY SECTION GRID */
+/* ================= WHY SECTION ================= */
+
 .why-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));
-  gap:30px;
-  margin-top:40px;
+  grid-template-columns:repeat(4,1fr);
+  gap:50px;
+  margin-top:50px;
 }
 
 .why-item{
@@ -220,25 +232,52 @@ footer{
 }
 
 .why-item img{
-  width:70px;
-  margin-bottom:15px;
+  width:75px;
+  margin-bottom:18px;
 }
 
 .why-item h3{
-  font-size:18px;
+  font-size:1.1rem;
   margin-bottom:10px;
+  font-weight:700;
 }
 
 .why-item p{
-  font-size:14px;
+  font-size:0.95rem;
   color:#475569;
 }
 
-/* MOBILE SPECIFIC OVERRIDES */
-@media(max-width:768px){
+/* ================= FOOTER ================= */
+
+footer{
+  background:#0f172a;
+  color:#94a3b8;
+  padding:50px 20px;
+  text-align:center;
+  font-size:0.9rem;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:1100px){
+  .why-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+
+@media(max-width:900px){
+
+  html{
+    font-size:17px;
+  }
+
   header{
     flex-direction:column;
-    padding: 15px 5%;
+    align-items:center;
+  }
+
+  .logo-box img{
+    height:60px;
   }
 
   nav{
@@ -248,263 +287,438 @@ footer{
   }
 
   nav a{
-    margin:8px 10px;
-    font-size:13px;
-  }
-  
-  .section {
-    padding-left: 5%;
-    padding-right: 5%;
+    margin:10px 14px;
+    font-size:1rem;
   }
 
-  .product {
-    flex-direction: column;
+  .hero{
+    padding:120px 20px;
   }
+
+  .hero h1{
+    font-size:2rem;
+  }
+
+  .hero h2{
+    font-size:1.1rem;
+  }
+
+  .section{
+    padding:70px 6%;
+  }
+
+  .section h2{
+    font-size:1.7rem;
+  }
+
+  .product{
+    flex-direction:column;
+    gap:40px;
+    margin-bottom:90px;
+  }
+
+  table{
+    display:block;
+    overflow-x:auto;
+    white-space:nowrap;
+  }
+
+  .why-grid{
+    grid-template-columns:1fr;
+  }
+
 }
 
 </style>
 
 </head>
 
-<body>
-
-<header>
-<div class="logo-box">
-<img src="logo.png" alt="Ray Precicomp Logo">
-</div>
-<nav>
-<a href="#about">Company</a>
-<a href="#advantage">Why Us</a>
-<a href="#products">Products</a>
-<a href="#engineering">Engineering</a>
-<a href="#manufacturing">Manufacturing</a>
-<a href="#contact">Contact</a>
-</nav>
-</header>
-
-
-<section class="hero">
-<div class="hero-content">
-<h1>Next-Gen Pipe Assemblies for the Indian Automotive Industry</h1>
-<h2>Lightweight. Leak-Proof. EV-Ready.</h2>
-</div>
-</section>
-
+<!-- ================= COMPANY OVERVIEW ================= -->
 
 <section class="section" id="about">
+
 <h2>Company Overview</h2>
+
 <p>
-Ray Precicomp is a specialized manufacturer of engineered plastic pipe assemblies for the Indian automotive industry. We design and produce integrated line systems for Fuel delivery, SCR emission control, Pneumatic braking, Thermal management and Hydrogen mobility platforms.
+Ray Precicomp Pvt Ltd is an advanced fluid routing system manufacturer specializing in high-performance
+plastic pipe assemblies for the automotive industry. We engineer complete line systems for Fuel delivery,
+SCR emission control, Pneumatic braking, Thermal management, Electrified mobility and Hydrogen platforms.
 </p>
+
 <p>
-Our solutions are engineered to meet stringent OEM standards for Permeation control, Burst resistance, Impulse fatigue, Chemical compatibility, Vibration durability and Dimensional stability.
+Our product architecture integrates lightweight polymer engineering, barrier-layer technology,
+quick connector integration and vibration-optimized routing geometry to deliver compact,
+high-efficiency fluid transport solutions aligned with global OEM standards.
 </p>
+
 <p>
-We support full APQP lifecycle including feasibility review, DFMEA, Prototype validation, PPAP Level 3 documentation, control plans, SPC implementation and Just-In-Time serial supply aligned to OEM production schedules.
+We focus on complete system integration rather than individual components — ensuring optimized packaging,
+reduced joints, minimized leak interfaces and improved assembly efficiency at vehicle level.
 </p>
+
+<p>
+All systems are engineered to meet stringent performance requirements including permeation control,
+burst resistance, impulse fatigue durability, chemical compatibility, hydrolysis resistance,
+thermal cycling stability and dimensional robustness under dynamic vehicle loading conditions.
+</p>
+
+<p>
+We support the full APQP lifecycle including feasibility reviews, DFMEA, Prototype builds,
+Validation planning, PPAP Level 3 documentation, control plan development,
+process capability validation and Just-In-Time serial production aligned to OEM takt time.
+</p>
+
+<p>
+Our approach combines global system thinking with localized execution — enabling
+cost-competitive, emission-compliant and future-ready fluid routing solutions
+for Indian and international vehicle platforms.
+</p>
+
 </section>
 
 
 
+<!-- ================= WHY RAY PRECICOMP ================= -->
+
 <section class="section gray" id="advantage">
+
 <h2>Why Ray Precicomp</h2>
+
+<p style="max-width:900px;margin-bottom:40px;">
+We operate with a Tier-1 system mindset — focusing on engineered integration,
+functional reliability and platform scalability. Our solutions are designed not just
+for component performance, but for complete vehicle architecture optimization.
+</p>
+
 <div class="why-grid">
 
 <div class="why-item">
 <img src="icons/compact-installation.png">
-<h3>Compact Installation Solutions</h3>
-<p>Smart routing solutions for space-optimized vehicle integration.</p>
+<h3>Optimized Packaging & Routing</h3>
+<p>
+Space-efficient 3D routing solutions engineered for complex underbody,
+engine bay and battery pack environments.
+</p>
 </div>
 
 <div class="why-item">
 <img src="icons/leakproof-reliability.png">
-<h3>Leak-Proof Reliability</h3>
-<p>Validated sealing performance under extreme operating conditions.</p>
+<h3>Validated Sealing Integrity</h3>
+<p>
+Connector-integrated assemblies validated for vibration endurance,
+thermal expansion cycles and high-pressure sealing reliability.
+</p>
 </div>
 
 <div class="why-item">
 <img src="icons/system-expertise.png">
-<h3>End-to-End System Expertise</h3>
-<p>Concept to production integration capability.</p>
+<h3>System-Level Engineering</h3>
+<p>
+Design-for-assembly and modular architecture approach reducing
+installation time and vehicle integration complexity.
+</p>
 </div>
 
 <div class="why-item">
 <img src="icons/performance-cost.png">
-<h3>Optimized Performance & Cost</h3>
-<p>Lightweight engineered systems balancing cost and performance.</p>
+<h3>Lightweight Performance</h3>
+<p>
+Advanced polymer selection and barrier-layer construction
+delivering optimized mass reduction without compromising durability.
+</p>
 </div>
 
 <div class="why-item">
 <img src="icons/tailored-application.png">
-<h3>Tailored for Every Application</h3>
-<p>Customized assemblies for ICE, HEV, BEV and Hydrogen platforms.</p>
+<h3>Platform Scalability</h3>
+<p>
+Adaptable system architecture supporting ICE, HEV, BEV and
+Hydrogen platforms with modular design philosophy.
+</p>
 </div>
 
 <div class="why-item">
 <img src="icons/future-technologies.png">
-<h3>Future-Ready Technologies</h3>
-<p>Advanced materials and heated line solutions for next-gen mobility.</p>
+<h3>Emission & Regulatory Compliance</h3>
+<p>
+Low-permeation multilayer technologies aligned with BS6,
+Euro 6 and evolving global emission regulations.
+</p>
 </div>
 
 <div class="why-item">
 <img src="icons/proven-durability.png">
-<h3>Proven Durability</h3>
-<p>Resistance to vibration, pressure and aggressive media.</p>
+<h3>High Durability Validation</h3>
+<p>
+Impulse testing, burst validation, thermal aging,
+chemical exposure and vibration fatigue endurance validation.
+</p>
 </div>
 
 <div class="why-item">
 <img src="icons/innovation-partner.png">
-<h3>Partner for Innovation</h3>
-<p>Collaborative engineering for sustainable mobility solutions.</p>
+<h3>Collaborative Development Partner</h3>
+<p>
+Early-stage involvement from concept phase to serial production
+ensuring optimized cost, performance and manufacturing readiness.
+</p>
 </div>
 
 </div>
+
 </section>
 
-
+<!-- ================= PRODUCT SECTION ================= -->
 
 <section class="section" id="products">
-<h2>Product Portfolio</h2>
 
+<h2>Advanced Fluid Routing Portfolio</h2>
+
+<p style="max-width:950px;margin-bottom:60px;">
+Our product portfolio covers complete fluid transport architectures across conventional,
+hybrid, battery electric and hydrogen vehicle platforms. Each system is engineered
+for functional integration, weight optimization, long-term durability and regulatory compliance.
+</p>
+
+
+
+<!-- FUEL SYSTEMS -->
 <div class="product">
 <img src="Fuel.jpg">
 <div class="product-content">
-<h3>Fuel Delivery Systems</h3>
+<h3>Fuel Delivery & Evaporative Emission Systems</h3>
 <p>
-Engineered mono-layer and multi-layer plastic tube assemblies for gasoline and diesel applications. Designed for Low permeation, Ethanol compatibility (E10,E20 and upto E95), Thermal resistance and Long-term durability.
+High-performance mono-layer and multilayer plastic tube assemblies engineered for
+gasoline, ethanol-blended fuels (E10, E20 up to E95) and diesel applications.
+Designed to meet stringent evaporative emission standards and long-term permeation requirements.
 </p>
+
 <ul>
-<li>Tank-to-Engine routing systems</li>
-<li>Supply, Return & Vent lines</li>
+<li>Tank-to-engine fuel supply and return lines</li>
+<li>Integrated vent & vapor management lines</li>
+<li>Low-permeation multilayer barrier constructions</li>
 <li>Quick connector integrated assemblies</li>
-<li>BS6 / Euro 6 compliant solutions</li>
-<li>Vibration and thermal fatigue validated</li>
+<li>Engine bay and underbody routing solutions</li>
+<li>BS6 / Euro 6 compliant emission performance</li>
 </ul>
+
 <div class="specs">
 Operating Temperature: -40°C to +120°C<br>
-Burst Pressure: >20 bar (application dependent)<br>
-Permeation: Low emission compliant<br>
-100% Leak Tested
+Working Pressure: Application dependent<br>
+Burst & Impulse Validated<br>
+Low Permeation Certified Architecture<br>
+100% End-of-Line Leak Tested
 </div>
 </div>
 </div>
 
+
+
+<!-- SCR SYSTEMS -->
 <div class="product">
 <img src="scr.jpg">
 <div class="product-content">
-<h3>SCR / Urea Delivery Systems</h3>
+<h3>SCR / Urea Dosing Systems</h3>
 <p>
-Selective Catalytic Reduction fluid lines engineered for Urea crystallization resistance, Chemical durability and Temperature stability across extreme operating conditions.
+Selective Catalytic Reduction (SCR) fluid transport systems engineered
+for urea crystallization resistance, chemical durability and stable
+performance under extreme thermal conditions.
 </p>
+
 <ul>
-<li>Heated & Non-Heated assemblies</li>
-<li>Tank-to-Dosing module integration</li>
-<li>Low-temperature flexibility</li>
-<li>High chemical resistance materials</li>
-<li>Connector integrated leak-proof architecture</li>
+<li>Heated and non-heated line assemblies</li>
+<li>Tank-to-dosing module integration</li>
+<li>Low temperature flexibility and freeze resistance</li>
+<li>Electrical heating interface capability</li>
+<li>Chemical-resistant multilayer constructions</li>
+<li>Heavy commercial and passenger vehicle applications</li>
 </ul>
+
 <div class="specs">
-Operating Temp: -40°C to +95°C<br>
-Urea Compatible Materials<br>
-Pressure & Impulse Tested<br>
-100% End-of-Line Leak Verification
+Operating Temperature: -40°C to +95°C<br>
+Urea Compatible Polymers<br>
+Impulse & Thermal Cycling Validated<br>
+Integrated Connector Sealing Architecture<br>
+100% Leak Verification
 </div>
 </div>
 </div>
 
+
+
+<!-- PNEUMATIC SYSTEMS -->
 <div class="product">
 <img src="pneumatic.jpg">
 <div class="product-content">
-<h3>Pneumatic & Air Brake Systems</h3>
+<h3>Pneumatic, Air Brake & Vacuum Systems</h3>
 <p>
-Plastic tubing systems for commercial vehicle Air brake, Air suspension and Vacuum applications. Designed for high impulse cycles and dimensional stability under pressure.
+High-reliability air routing systems for commercial vehicle braking,
+air suspension and vacuum-assisted applications.
+Engineered for dimensional stability under dynamic pressure loading.
 </p>
+
 <ul>
 <li>Air brake routing systems</li>
 <li>Suspension air lines</li>
-<li>Vacuum assist brake lines</li>
+<li>Vacuum brake assist tubing</li>
 <li>ABS compatible assemblies</li>
+<li>Impulse fatigue resistant materials</li>
+<li>High cycle durability architecture</li>
 </ul>
+
 <div class="specs">
-Working Pressure: up to 15 bar<br>
-High impulse resistance<br>
-Burst and fatigue validated<br>
-Temperature stable compounds
+Working Pressure: Up to 15 bar<br>
+High Impulse Endurance<br>
+Burst & Fatigue Validated<br>
+Temperature Stable Compounds<br>
+Commercial Vehicle Proven Applications
 </div>
 </div>
 </div>
 
+
+
+<!-- THERMAL MANAGEMENT -->
 <div class="product">
 <img src="thermal.jpg">
 <div class="product-content">
-<h3>Thermal & Battery Cooling Systems</h3>
+<h3>Thermal Management & Battery Cooling Systems</h3>
 <p>
-Lightweight plastic coolant and battery cooling assemblies for HEV and BEV architectures. Optimized for High-temperature performance and Glycol compatibility.
+Lightweight coolant and battery thermal management assemblies
+designed for hybrid and battery electric vehicle platforms.
+Optimized for glycol compatibility, temperature cycling and
+compact packaging within high-density battery architectures.
 </p>
+
 <ul>
-<li>Battery cooling circuits</li>
-<li>Electronic cooling loops</li>
-<li>Degassing systems</li>
-<li>Metal replacement lightweight solutions</li>
+<li>Battery cooling loops</li>
+<li>Power electronics cooling circuits</li>
+<li>Degassing & reservoir interconnections</li>
+<li>Glycol-compatible polymer systems</li>
+<li>Metal replacement lightweight strategies</li>
+<li>Electrified vehicle optimized routing</li>
 </ul>
+
 <div class="specs">
-Temp Range: -40°C to +125°C<br>
+Operating Temperature: -40°C to +125°C<br>
 Coolant & Glycol Compatible<br>
-Impulse & Pressure Tested<br>
-Electrified Vehicle Ready
+Thermal Cycling & Aging Tested<br>
+Pressure & Vibration Validated<br>
+EV Platform Ready
 </div>
 </div>
 </div>
 
+
+
+<!-- HYDROGEN & ALTERNATIVE FUELS -->
 <div class="product">
 <img src="hydrogen.jpg">
 <div class="product-content">
-<h3>Hydrogen & Alternative Fuel Lines</h3>
+<h3>Hydrogen & Alternative Fuel Routing Concepts</h3>
 <p>
-Next-generation fluid transport concepts for hydrogen mobility platforms and alternative fuel architectures. Designed for lightweight optimization and future mobility integration.
+Next-generation fluid routing concepts for hydrogen mobility,
+compressed gas systems and emerging alternative fuel platforms.
+Focused on lightweight optimization, safety integrity and
+future regulatory alignment.
 </p>
+
 <ul>
-<li>Hydrogen routing concepts</li>
-<li>Medium & Low-pressure capable materials</li>
-<li>Future mobility platform ready</li>
-<li>Lightweight optimized assemblies</li>
+<li>Hydrogen compatible material concepts</li>
+<li>Medium and low-pressure routing systems</li>
+<li>Gas-tight sealing architecture</li>
+<li>Lightweight multi-platform adaptability</li>
+<li>Future mobility platform integration</li>
 </ul>
+
+<div class="specs">
+Hydrogen Compatible Polymer Concepts<br>
+Safety-Oriented System Design<br>
+Lightweight Architecture Optimization<br>
+Next-Generation Mobility Ready
 </div>
 </div>
+</div>
+
 </section>
+<!-- ================= ENGINEERING ================= -->
 
 <section class="section dark" id="engineering">
-<h2>Engineering & Validation</h2>
+
+<h2>Engineering & Validation Excellence</h2>
+
+<p style="max-width:900px;">
+Our engineering philosophy is centered on system reliability, vehicle integration efficiency
+and long-term performance validation. We engage from early concept feasibility through
+serial production, ensuring robust design architecture and manufacturing readiness.
+</p>
+
 <ul>
-<li>APQP & DFMEA Support</li>
-<li>Pressure & Burst Testing</li>
-<li>Impulse & Fatigue Validation</li>
-<li>Thermal Cycling & Aging Tests</li>
-<li>Chemical Compatibility Validation</li>
-<li>Dimensional Capability (Cp/Cpk)</li>
-<li>Control Plan & SPC Implementation</li>
-<li>PPAP Level 3 Documentation</li>
+<li>Advanced Product Quality Planning (APQP)</li>
+<li>Design Failure Mode & Effects Analysis (DFMEA)</li>
+<li>Design for Assembly & Installation Optimization</li>
+<li>Pressure, Burst & Impulse Testing</li>
+<li>Thermal Cycling & Accelerated Aging Validation</li>
+<li>Chemical & Media Compatibility Testing</li>
+<li>Vibration & Fatigue Endurance Testing</li>
+<li>Dimensional Capability Studies (Cp / Cpk)</li>
+<li>Control Plan & Statistical Process Control (SPC)</li>
+<li>PPAP Level 3 Documentation Support</li>
 </ul>
+
+<p>
+All validation protocols are aligned with OEM technical specifications
+and global automotive quality standards.
+</p>
+
 </section>
+
+
+
+<!-- ================= MANUFACTURING ================= -->
 
 <section class="section" id="manufacturing">
+
 <h2>Manufacturing Excellence</h2>
-<img src="manufacturing.jpg" style="width:100%;max-width:1000px;border-radius:10px;margin-bottom:30px;">
+
+<img src="manufacturing.jpg" style="width:100%;max-width:1000px;border-radius:12px;margin-bottom:40px;">
+
 <p>
-Lean manufacturing environment with traceable batch control, integrated forming, assembly, laser marking and 100% leak testing systems aligned with OEM Just-In-Time supply models.
+Our production environment is structured around lean manufacturing principles,
+traceable batch control and integrated assembly architecture.
+We focus on process repeatability, dimensional stability and zero-defect supply performance.
 </p>
+
 <ul>
-<li>Tube forming & routing systems</li>
-<li>End-fitting and connector integration</li>
-<li>Laser marking & traceability</li>
-<li>End-of-line validation</li>
-<li>Preventive maintenance programs</li>
+<li>Automated tube forming & routing systems</li>
+<li>End-fitting & quick connector integration</li>
+<li>Laser marking & full traceability systems</li>
+<li>In-line dimensional inspection</li>
+<li>100% End-of-Line leak testing</li>
+<li>Preventive & predictive maintenance systems</li>
+<li>Just-In-Time supply aligned with OEM takt time</li>
 </ul>
+
+<p>
+Process capability and quality assurance systems are continuously monitored
+to ensure stable serial production and consistent product performance.
+</p>
+
 </section>
 
+
+
+<!-- ================= VEHICLE PLATFORM INTEGRATION ================= -->
+
 <section class="section gray">
-<h2>Vehicle Platform Integration</h2>
-<div class="table-container">
+
+<h2>Vehicle Platform Integration Matrix</h2>
+
+<p style="max-width:900px;margin-bottom:30px;">
+Our fluid routing architectures are designed for cross-platform adaptability,
+enabling modular integration across conventional and electrified vehicle platforms.
+</p>
+
 <table>
 <tr>
 <th>System</th>
@@ -513,6 +727,7 @@ Lean manufacturing environment with traceable batch control, integrated forming,
 <th>BEV</th>
 <th>Hydrogen</th>
 </tr>
+
 <tr>
 <td><strong>Air Lines</strong></td>
 <td>✔</td>
@@ -520,6 +735,7 @@ Lean manufacturing environment with traceable batch control, integrated forming,
 <td>✔</td>
 <td>✔</td>
 </tr>
+
 <tr>
 <td>Fuel Delivery</td>
 <td>✔</td>
@@ -527,6 +743,7 @@ Lean manufacturing environment with traceable batch control, integrated forming,
 <td>-</td>
 <td>-</td>
 </tr>
+
 <tr>
 <td>SCR Systems</td>
 <td>✔</td>
@@ -534,6 +751,7 @@ Lean manufacturing environment with traceable batch control, integrated forming,
 <td>-</td>
 <td>-</td>
 </tr>
+
 <tr>
 <td>Battery Cooling</td>
 <td>-</td>
@@ -541,6 +759,7 @@ Lean manufacturing environment with traceable batch control, integrated forming,
 <td>✔</td>
 <td>-</td>
 </tr>
+
 <tr>
 <td>Hydrogen Lines</td>
 <td>-</td>
@@ -548,105 +767,175 @@ Lean manufacturing environment with traceable batch control, integrated forming,
 <td>-</td>
 <td>✔</td>
 </tr>
+
 </table>
-</div>
+
 </section>
 
+
+
+<!-- ================= MATERIALS SECTION ================= -->
+
 <section class="section">
+
 <h2>Materials & Polymer Engineering</h2>
+
+<p style="max-width:900px;">
+Material selection is critical to long-term system durability, emission compliance
+and mechanical performance. We deploy advanced engineering polymers and
+multilayer barrier constructions tailored to application-specific requirements.
+</p>
+
 <ul>
 <li>Advanced PA6, PA11 & PA12 engineering polymers</li>
-<li>Multilayer EVOH barrier construction</li>
-<li>E10, E20 upto E95 and Bio Diesel compatibility</li>
-<li>Thermal aging & hydrolysis stability</li>
+<li>Multilayer EVOH barrier constructions for low permeation</li>
+<li>E10, E20 up to E95 and Biodiesel compatibility</li>
+<li>Hydrolysis & thermal aging resistant grades</li>
+<li>Impact-modified and high-flex compounds</li>
 <li>Lightweight metal replacement strategies</li>
+<li>Electrified vehicle compatible material systems</li>
 </ul>
 
-<h3 style="margin-top:40px;">Material Capability Matrix</h3>
-<div class="table-container">
+
+
+<h3 style="margin-top:50px;">Material Capability Matrix</h3>
+
 <table>
+
 <tr>
 <th>Material</th>
-<th>Strength</th>
+<th>Mechanical Strength</th>
 <th>Chemical Resistance</th>
 <th>Moisture Absorption</th>
 <th>Primary Applications</th>
 </tr>
+
 <tr>
 <td>PA6 (Nylon 6)</td>
-<td>High Mechanical Strength</td>
+<td>High Strength</td>
 <td>Good</td>
-<td>Higher Absorption</td>
-<td>Cost-sensitive structural systems</td>
+<td>Moderate to High</td>
+<td>Structural & cost-optimized systems</td>
 </tr>
+
 <tr>
 <td>PA11 (Nylon 11)</td>
 <td>High Strength with Flexibility</td>
 <td>Very Good</td>
 <td>Low</td>
-<td>Fuel & chemical handling lines</td>
+<td>Fuel & chemical transport systems</td>
 </tr>
+
 <tr>
 <td>PA12 (Nylon 12)</td>
-<td>Very High Dimensional Stability</td>
+<td>Excellent Dimensional Stability</td>
 <td>Excellent</td>
 <td>Very Low</td>
-<td>Premium fuel, SCR, thermal & EV systems</td>
+<td>Premium fuel, SCR & EV thermal systems</td>
 </tr>
+
 <tr>
 <td>Multilayer EVOH Barrier</td>
-<td>Engineered Composite</td>
+<td>Composite Engineered Structure</td>
 <td>Ultra-Low Permeation</td>
 <td>Optimized</td>
-<td>BS6 / Euro 6 emission compliant systems</td>
+<td>BS6 / Euro 6 compliant emission systems</td>
 </tr>
+
 </table>
-</div>
+
+
 
 <h3 style="margin-top:60px;">Pipe Size & Technical Capability</h3>
-<div class="table-container">
+
 <table>
+
 <tr>
 <th>Parameter</th>
 <th>Capability Range</th>
 </tr>
+
 <tr>
 <td>Outer Diameter (OD)</td>
 <td>4 mm – 25 mm</td>
 </tr>
+
 <tr>
 <td>Wall Thickness</td>
 <td>0.75 mm – 3.0 mm</td>
 </tr>
+
 <tr>
 <td>Working Pressure</td>
 <td>Up to 30 bar (application dependent)</td>
 </tr>
+
 <tr>
 <td>Temperature Range</td>
 <td>-40°C to +125°C</td>
 </tr>
+
 <tr>
 <td>Forming Capability</td>
-<td>Complex CNC 3D Formed Geometries</td>
+<td>Complex Multi-Axis Geometries</td>
 </tr>
+
 <tr>
 <td>Heated Line Capability</td>
 <td>Electrical Integration Ready</td>
 </tr>
+
 </table>
-</div>
+
 </section>
+<!-- ================= CONTACT ================= -->
 
 <section class="section" id="contact">
-<h2>Contact</h2>
-<p>Email: sales@rayprecicomp.com</p>
-<p>Pune, India</p>
+
+<h2>Contact & Business Inquiries</h2>
+
+<p style="max-width:800px;">
+We collaborate with OEMs, Tier-1 suppliers and system integrators
+for advanced fluid routing and polymer-based transport systems.
+For RFQs, engineering discussions or development partnerships,
+please reach out to our technical sales team.
+</p>
+
+<div style="margin-top:30px;font-size:1.05rem;line-height:1.8;">
+<strong>Email:</strong> sales@rayprecicomp.com<br>
+<strong>Location:</strong> Pune, Maharashtra, India<br>
+<strong>Industry Focus:</strong> Automotive Fluid Routing Systems<br>
+<strong>Core Expertise:</strong> Fuel, SCR, Pneumatic, Thermal, EV & Hydrogen Platforms
+</div>
+
+<p style="margin-top:40px;">
+We support early-stage development programs, localization initiatives
+and emission-compliant system transitions for Indian and global platforms.
+</p>
+
 </section>
 
-<footer>
-© 2026 Ray Precicomp Pvt Ltd | Next-Gen Pipe Assemblies
-</footer>
 
-</body>
-</html>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<div style="max-width:1000px;margin:auto;">
+
+<p style="font-weight:600;color:white;font-size:1.1rem;">
+Ray Precicomp Pvt Ltd – Advanced Automotive Fluid Routing Systems
+</p>
+
+<p style="margin-top:15px;">
+Engineered polymer pipe assemblies | Low permeation systems | Emission compliant solutions |
+Lightweight vehicle integration | Electrified mobility ready architectures
+</p>
+
+<p style="margin-top:20px;font-size:0.9rem;">
+© 2026 Ray Precicomp Pvt Ltd. All rights reserved.
+</p>
+
+</div>
+
+</footer>
