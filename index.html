@@ -17,16 +17,62 @@
  },
  "email": "sales@rayprecicomp.com"
 }
-</script>
-<!-- Google Analytics (GA4) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZFD240QVJ2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-ZFD240QVJ2');
+/* ================= MOBILE NAV FIX ================= */
+
+document.querySelectorAll("#nav-menu a").forEach(link => {
+  link.addEventListener("click", function(){
+    document.getElementById("nav-menu").classList.remove("active");
+  });
+});
+
+/* ================= DOWNLOAD FUNCTION WITH GOOGLE SHEETS ================= */
+
+let selectedFile = '';
+
+function openDownload(type){
+  document.getElementById("downloadModal").style.display = "flex";
+
+  if(type === 'company'){
+    selectedFile = "downloads/ray-precicomp-company-profile.pdf";
+  }
+  else if(type === 'design'){
+    selectedFile = "downloads/nylon-tube-design-guideline.pdf";
+  }
+}
+
+function closeDownload(){
+  document.getElementById("downloadModal").style.display = "none";
+}
+
+document.getElementById("downloadForm").addEventListener("submit", function(e){
+
+  e.preventDefault();
+
+  const formData = {
+    name: document.getElementById("dlName").value,
+    company: document.getElementById("dlCompany").value,
+    email: document.getElementById("dlEmail").value,
+    designation: document.getElementById("dlDesignation").value,
+    mobile: document.getElementById("dlMobile").value,
+    file: selectedFile
+  };
+
+  fetch("https://script.google.com/macros/s/AKfycbyuXf0ZFlDr4ItVCyvZ0Uo3wm9pP-Zh1apUzJSRcnf_M86XmCZF0ATnW7WEd-NC9wui/exec", {
+    method: "POST",
+    body: JSON.stringify(formData)
+  })
+  .then(response => response.json())
+  .then(data => {
+      window.location.href = selectedFile;
+      closeDownload();
+  })
+  .catch(error => console.error("Error:", error));
+
+});
+
 </script>
+
 <head>
 
 <link rel="canonical" href="https://rayprecicomp.com/">
@@ -345,6 +391,115 @@ footer{
 
 }
 
+
+/* ================= DOWNLOAD RESOURCES ================= */
+
+.download-section{
+  padding:110px 9%;
+  background:#f8fafc;
+  text-align:center;
+}
+
+.download-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:50px;
+  margin-top:60px;
+}
+
+.download-card{
+  background:white;
+  padding:50px 40px;
+  border-radius:16px;
+  box-shadow:0 20px 50px rgba(0,0,0,0.08);
+  transition:0.3s ease;
+}
+
+.download-card:hover{
+  transform:translateY(-8px);
+}
+
+.download-card h3{
+  font-size:1.5rem;
+  margin-bottom:20px;
+}
+
+.download-card p{
+  font-size:1rem;
+  color:#475569;
+  margin-bottom:30px;
+}
+
+.download-card button{
+  background:#0f172a;
+  color:white;
+  padding:16px 30px;
+  border:none;
+  border-radius:6px;
+  font-weight:600;
+  font-size:15px;
+  cursor:pointer;
+}
+
+.download-card button:hover{
+  background:#1e293b;
+}
+
+/* ================= DOWNLOAD MODAL ================= */
+
+.modal{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.65);
+  z-index:3000;
+  align-items:center;
+  justify-content:center;
+}
+
+.modal-content{
+  background:white;
+  width:420px;
+  padding:40px;
+  border-radius:12px;
+  box-shadow:0 25px 60px rgba(0,0,0,0.25);
+}
+
+.modal-content h3{
+  margin-bottom:20px;
+}
+
+.modal-content input{
+  width:100%;
+  padding:14px;
+  margin:10px 0;
+  border:1px solid #cbd5e1;
+  border-radius:6px;
+  font-size:15px;
+}
+
+.modal-content button{
+  width:100%;
+  background:#0f172a;
+  color:white;
+  padding:16px;
+  border:none;
+  border-radius:6px;
+  font-weight:600;
+  margin-top:15px;
+  cursor:pointer;
+}
+
+.modal-content button:hover{
+  background:#1e293b;
+}
+
+.close-modal{
+  text-align:right;
+  font-size:22px;
+  cursor:pointer;
+}
+
 </style>
 
 </head>
@@ -370,6 +525,7 @@ footer{
 <a href="#engineering">Engineering</a>
 <a href="#manufacturing">Manufacturing</a>
 <a href="#materials">Materials</a>
+<a href="#resources">Resources</a>
 <a href="#contact">Contact</a>
 </nav>
 
@@ -675,7 +831,7 @@ under BS6 and Euro 6 regulatory frameworks.
 
 <div class="specs">
 
-Operating Temperature: -40°C to +95°C<br>
+Operating Temperature: -40°C to +120°C<br>
 
 Burst & Impulse Validated<br>
 
@@ -891,8 +1047,6 @@ Lightweight Architecture Optimization
 
 </section>
 
-
-
 <!-- ================= ENGINEERING & VALIDATION ================= -->
 
 <section class="section dark" id="engineering">
@@ -991,6 +1145,8 @@ aligned with OEM Just-In-Time delivery models.
 
 </section>
 
+
+
 <!-- ================= VEHICLE PLATFORM INTEGRATION ================= -->
 
 <section class="section gray">
@@ -1005,51 +1161,92 @@ enabling modular integration across conventional and electrified vehicle platfor
 <table>
 
 <tr>
+
 <th>System</th>
+
 <th>ICE</th>
+
 <th>HEV</th>
+
 <th>BEV</th>
+
 <th>Hydrogen</th>
+
 </tr>
 
-<tr>
-<td>Air Lines</td>
-<td>✔</td>
-<td>✔</td>
-<td>✔</td>
-<td>✔</td>
-</tr>
 
 <tr>
+
+<td><strong>Air Lines</strong></td>
+
+<td>✔</td>
+
+<td>✔</td>
+
+<td>✔</td>
+
+<td>✔</td>
+
+</tr>
+
+
+<tr>
+
 <td>Fuel Delivery</td>
+
 <td>✔</td>
+
 <td>✔</td>
+
 <td>-</td>
+
 <td>-</td>
+
 </tr>
 
+
 <tr>
+
 <td>SCR Systems</td>
+
 <td>✔</td>
+
 <td>✔</td>
+
 <td>-</td>
+
 <td>-</td>
+
 </tr>
 
+
 <tr>
+
 <td>Battery Cooling</td>
+
 <td>-</td>
+
 <td>✔</td>
+
 <td>✔</td>
+
 <td>-</td>
+
 </tr>
 
+
 <tr>
+
 <td>Hydrogen Lines</td>
+
 <td>-</td>
+
 <td>-</td>
+
 <td>-</td>
+
 <td>✔</td>
+
 </tr>
 
 </table>
@@ -1095,43 +1292,77 @@ tailored to application-specific environmental exposure and pressure requirement
 <table>
 
 <tr>
+
 <th>Material</th>
+
 <th>Mechanical Strength</th>
+
 <th>Chemical Resistance</th>
+
 <th>Moisture Absorption</th>
+
 <th>Primary Applications</th>
+
 </tr>
 
+
 <tr>
+
 <td>PA6 (Nylon 6)</td>
+
 <td>High Strength</td>
+
 <td>Good</td>
+
 <td>Moderate to High</td>
+
 <td>Structural & cost-optimized systems</td>
+
 </tr>
 
+
 <tr>
+
 <td>PA11 (Nylon 11)</td>
+
 <td>High Strength with Flexibility</td>
+
 <td>Very Good</td>
+
 <td>Low</td>
+
 <td>Fuel & chemical transport systems</td>
+
 </tr>
 
+
 <tr>
+
 <td>PA12 (Nylon 12)</td>
+
 <td>Excellent Dimensional Stability</td>
+
 <td>Excellent</td>
+
 <td>Very Low</td>
+
 <td>Premium fuel, SCR & EV thermal systems</td>
+
 </tr>
 
+
 <tr>
+
 <td>Multilayer EVOH Barrier</td>
+
 <td>Composite Engineered Structure</td>
+
 <td>Ultra-Low Permeation</td>
+
 <td>Optimized</td>
+
 <td>BS6 / Euro 6 compliant emission systems</td>
+
 </tr>
 
 </table>
@@ -1142,44 +1373,109 @@ tailored to application-specific environmental exposure and pressure requirement
 <table>
 
 <tr>
+
 <th>Parameter</th>
+
 <th>Capability Range</th>
+
 </tr>
 
+
 <tr>
+
 <td>Outer Diameter (OD)</td>
+
 <td>4 mm – 25 mm</td>
+
 </tr>
 
+
 <tr>
+
 <td>Wall Thickness</td>
+
 <td>0.75 mm – 3.0 mm</td>
+
 </tr>
 
+
 <tr>
+
 <td>Working Pressure</td>
+
 <td>Up to 30 bar (application dependent)</td>
+
 </tr>
 
+
 <tr>
+
 <td>Temperature Range</td>
+
 <td>-40°C to +125°C</td>
+
 </tr>
 
+
 <tr>
+
 <td>Forming Capability</td>
+
 <td>Complex Multi-Axis Geometries</td>
+
 </tr>
 
+
 <tr>
+
 <td>Heated Line Capability</td>
+
 <td>Electrical Integration Ready</td>
+
 </tr>
 
 </table>
 
 </section>
 
+
+<!-- ================= TECHNICAL RESOURCES ================= -->
+
+<section class="download-section" id="resources">
+
+<h2>Technical Resources</h2>
+
+<p style="max-width:850px;margin:0 auto 30px auto;">
+Download our Company Profile and Plastic / Nylon Tube Design Guideline.
+Access is available after submitting your professional contact details.
+</p>
+
+<div class="download-grid">
+
+<div class="download-card">
+<h3>Company Profile</h3>
+<p>
+Overview of Ray Precicomp capabilities, integrated routing portfolio,
+material engineering expertise and manufacturing strengths.
+</p>
+<button onclick="openDownload('company')">
+Download Company Profile
+</button>
+</div>
+
+<div class="download-card">
+<h3>Plastic / Nylon Tube Design Guideline</h3>
+<p>
+Comprehensive design reference covering bend geometry,
+material options, multilayer constructions and feasibility guidelines.
+</p>
+<button onclick="openDownload('design')">
+Download Design Guideline
+</button>
+</div>
+
+</div>
+</section>
 
 
 <!-- ================= CONTACT ================= -->
@@ -1199,7 +1495,9 @@ method="POST"
 enctype="multipart/form-data"
 style="max-width:750px;">
 
+
 <div style="display:grid;gap:16px;">
+
 
 <input type="text"
 name="Name"
@@ -1207,16 +1505,19 @@ placeholder="Full Name *"
 required
 style="padding:14px;font-size:16px;border:1px solid #cbd5e1;border-radius:6px;">
 
+
 <input type="text"
 name="Company"
 placeholder="Company Name *"
 required
 style="padding:14px;font-size:16px;border:1px solid #cbd5e1;border-radius:6px;">
 
+
 <input type="text"
 name="Department"
-placeholder="Department / Designation"
+placeholder="Department (Engineering / Purchase / R&D)"
 style="padding:14px;font-size:16px;border:1px solid #cbd5e1;border-radius:6px;">
+
 
 <input type="email"
 name="Email"
@@ -1224,16 +1525,20 @@ placeholder="Email Address *"
 required
 style="padding:14px;font-size:16px;border:1px solid #cbd5e1;border-radius:6px;">
 
+
 <input type="tel"
 name="Phone"
 placeholder="Phone Number"
 style="padding:14px;font-size:16px;border:1px solid #cbd5e1;border-radius:6px;">
+
 
 <textarea name="Message"
 placeholder="Your Enquiry / Technical Requirements *"
 rows="6"
 required
 style="padding:14px;font-size:16px;border:1px solid #cbd5e1;border-radius:6px;"></textarea>
+
+
 
 <div>
 
@@ -1250,12 +1555,15 @@ style="font-size:15px;">
 
 </div>
 
+
+
 <button type="submit"
 style="background:#0f172a;color:white;padding:16px;font-size:17px;border:none;border-radius:6px;cursor:pointer;font-weight:600;">
 
 Submit Enquiry
 
 </button>
+
 
 </div>
 
@@ -1264,6 +1572,8 @@ Submit Enquiry
 
 <br><br>
 
+
+<!-- ===== COMPANY LEGAL INFORMATION ===== -->
 
 <div style="
 text-align:center;
@@ -1295,9 +1605,12 @@ sales@rayprecicomp.com
 
 </div>
 
+
 </section>
 
 
+
+<!-- ================= FOOTER ================= -->
 
 <footer>
 
@@ -1309,6 +1622,28 @@ sales@rayprecicomp.com
 
 <!-- ================= SCRIPT ================= -->
 
+
+<!-- ================= DOWNLOAD MODAL ================= -->
+
+<div class="modal" id="downloadModal">
+<div class="modal-content">
+<div class="close-modal" onclick="closeDownload()">&times;</div>
+
+<h3>Access Technical Resource</h3>
+
+<form id="downloadForm">
+<input type="text" id="dlName" placeholder="Full Name *" required>
+<input type="text" id="dlCompany" placeholder="Company Name *" required>
+<input type="email" id="dlEmail" placeholder="Official Email *" required>
+<input type="text" id="dlDesignation" placeholder="Designation">
+<input type="text" id="dlMobile" placeholder="Mobile Number">
+<button type="submit">Submit & Download</button>
+</form>
+
+</div>
+</div>
+
+
 <script>
 
 function toggleMenu(){
@@ -1319,15 +1654,63 @@ function toggleMenu(){
 
 }
 
-/* ✅ FIX ADDED: Auto-close mobile menu after clicking link */
 
-document.querySelectorAll('#nav-menu a').forEach(link => {
-  link.addEventListener('click', () => {
+/* ================= MOBILE NAV FIX ================= */
+
+document.querySelectorAll("#nav-menu a").forEach(link => {
+  link.addEventListener("click", function(){
     document.getElementById("nav-menu").classList.remove("active");
   });
 });
 
+/* ================= DOWNLOAD FUNCTION WITH GOOGLE SHEETS ================= */
+
+let selectedFile = '';
+
+function openDownload(type){
+  document.getElementById("downloadModal").style.display = "flex";
+
+  if(type === 'company'){
+    selectedFile = "downloads/ray-precicomp-company-profile.pdf";
+  }
+  else if(type === 'design'){
+    selectedFile = "downloads/nylon-tube-design-guideline.pdf";
+  }
+}
+
+function closeDownload(){
+  document.getElementById("downloadModal").style.display = "none";
+}
+
+document.getElementById("downloadForm").addEventListener("submit", function(e){
+
+  e.preventDefault();
+
+  const formData = {
+    name: document.getElementById("dlName").value,
+    company: document.getElementById("dlCompany").value,
+    email: document.getElementById("dlEmail").value,
+    designation: document.getElementById("dlDesignation").value,
+    mobile: document.getElementById("dlMobile").value,
+    file: selectedFile
+  };
+
+  fetch("https://script.google.com/macros/s/AKfycbyuXf0ZFlDr4ItVCyvZ0Uo3wm9pP-Zh1apUzJSRcnf_M86XmCZF0ATnW7WEd-NC9wui/exec", {
+    method: "POST",
+    body: JSON.stringify(formData)
+  })
+  .then(response => response.json())
+  .then(data => {
+      window.location.href = selectedFile;
+      closeDownload();
+  })
+  .catch(error => console.error("Error:", error));
+
+});
+
 </script>
+
+
 
 </body>
 
