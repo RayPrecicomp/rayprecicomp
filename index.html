@@ -1640,6 +1640,7 @@ document.querySelectorAll("#nav-menu a").forEach(link => {
 /* ================= DOWNLOAD FUNCTION WITH GOOGLE SHEETS ================= */
 
 let selectedFile = '';
+let isSubmitting = false;
 
 function openDownload(type){
   document.getElementById("downloadModal").style.display = "flex";
@@ -1660,6 +1661,16 @@ document.getElementById("downloadForm").addEventListener("submit", function(e){
 
   e.preventDefault();
 
+  if(isSubmitting) return;   // Prevent double submission
+  isSubmitting = true;
+
+  const submitBtn = this.querySelector("button");
+
+  submitBtn.disabled = true;
+  submitBtn.innerText = "Processing...";
+  submitBtn.style.opacity = "0.7";
+  submitBtn.style.cursor = "not-allowed";
+
   const formData = {
     name: document.getElementById("dlName").value,
     company: document.getElementById("dlCompany").value,
@@ -1675,10 +1686,26 @@ document.getElementById("downloadForm").addEventListener("submit", function(e){
   })
   .then(response => response.json())
   .then(data => {
-      window.location.href = selectedFile;
-      closeDownload();
+
+      submitBtn.innerText = "Download Starting...";
+
+      setTimeout(() => {
+        window.location.href = selectedFile;
+        closeDownload();
+      }, 800);
+
   })
-  .catch(error => console.error("Error:", error));
+  .catch(error => {
+
+      console.error("Error:", error);
+
+      submitBtn.disabled = false;
+      submitBtn.innerText = "Submit & Download";
+      submitBtn.style.opacity = "1";
+      submitBtn.style.cursor = "pointer";
+      isSubmitting = false;
+
+  });
 
 });
 
